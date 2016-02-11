@@ -1,0 +1,47 @@
+/**
+ * Write a description of class Fleet here.
+ * 
+ * Steven, Thompson
+ * 2/11/16
+ */
+public class Fleet
+{
+    private Ship ship1;
+    private Ship ship2;
+    private Ship ship3;
+    private Ship ship4;
+    private int x;
+    
+    public Fleet( Ship Ship1, Ship Ship2, Ship Ship3, Ship Ship4) //assigns ships
+    {
+        ship1 = Ship1;
+        ship2 = Ship2;
+        ship3 = Ship3;
+        ship4 = Ship4;
+        
+    }
+    public  void deploy() //divides fuel by half
+    {
+        
+        ship1.updateFuel();
+        ship2.updateFuel();
+        ship3.updateFuel();
+        ship4.updateFuel();
+    }
+    public void reFuel() //fills fuel to max
+    {
+        
+        ship1.addFuel();
+        ship2.addFuel();
+        ship3.addFuel();
+        ship4.addFuel();
+        
+    }
+    public void printSummary() //print name and fuel used
+    {
+    System.out.println(ship1.getName() + " has used " + ship1.getFuel());
+    System.out.println(ship2.getName() + " has used " + ship2.getFuel());
+    System.out.println(ship3.getName() + " has used " + ship3.getFuel());
+    System.out.println(ship4.getName() + " has used " + ship4.getFuel());
+}
+}

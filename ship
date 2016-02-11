@@ -1,0 +1,43 @@
+/**
+ * Write a description of class Ship here.
+ * 
+ thompson, steven
+ 2/11/16
+ */
+public class Ship
+{
+    // instance variables - replace the example below with your own
+    private String name;
+    private double fuel;
+    private double fullFuel;
+    private double usedFuel;
+    private double y;
+    
+    
+    public Ship(String inName, double inFuel)
+    {
+        name = inName;
+        fuel = inFuel;
+        fullFuel = inFuel;
+        
+    }
+    
+    public void updateFuel() //divides fuel by half
+    {
+        fuel = fuel / 2;
+        y = fuel;
+        usedFuel = usedFuel + y; //adds up used fuel
+    }
+    public void addFuel() //fills fuel to full
+    {
+        fuel = fullFuel;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public double getFuel() //returns total fuel used
+    {
+        return usedFuel;
+    }
+}
